@@ -1,3 +1,6 @@
+
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -91,6 +94,19 @@ public class login extends javax.swing.JFrame {
 
     private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnloginActionPerformed
         // TODO add your handling code here:
+        
+        String uname = txtusername.getText();
+        String psw = txtPassword.getText();
+        
+        if(uname.equals("admin") && psw.equals("123")){
+            JOptionPane.showMessageDialog(null, "Succsefull");
+            Register reg = new Register();
+            reg.setVisible(true);
+            this.dispose();
+        }else{
+            JOptionPane.showMessageDialog(null, "Invalid user name or password");
+        
+        }
     }//GEN-LAST:event_btnloginActionPerformed
 
     /**
